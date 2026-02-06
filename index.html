@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stefano Agnelli | Portfolio</title>
+    <meta
+      name="description"
+      content="Stefano Agnelli portfolio: robotics, AI, research, and selected projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-animate>
+      <a class="logo" href="#top" aria-label="Back to top">SA</a>
+      <nav class="site-nav">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="cta" href="#contact">Let&rsquo;s talk</a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-left" data-animate>
+          <div class="hero-intro">
+            <p class="eyebrow">industrial automation engineer</p>
+            <h1 class="hero-title">
+              <span class="line">Hi, I'm</span>
+              <span class="line accent">Stefano Agnelli</span>
+            </h1>
+            <p class="hero-subtitle">and i like Coding, Robotics &amp; AI</p>
+          </div>
+          
+          <div class="focus-list">
+            <span>Robotic control</span>
+            <span>Artificial intelligence</span>
+            <span>LLMs for robotics</span>
+            <span>Imitation learning</span>
+          </div>
+          
+          <p class="lead">
+            MSc student in Industrial Automation Engineering at the University
+            of Brescia and Double Degree in Mechatronic Systems at Sorbonne
+            University (Paris). I like <strong>AI-driven robotics</strong> and
+            automation systems that turn ideas into reliable prototypes.
+          </p>
+          
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn ghost" href="mailto:sagnelli02@gmail.com">Get in touch</a>
+          </div>
+          
+          <div class="hero-bottom">
+            <a
+              class="btn-link"
+              href="assets/Resume%20Stefano%20Agnelli.pdf"
+              target="_blank"
+              >Download CV ↓</a
+            >
+            <div class="socials">
+              <a href="https://linkedin.com/in/stefano-agnelli" target="_blank"
+                >LinkedIn</a
+              >
+              <a href="https://github.com/tetano02" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right" data-animate>
+          <div class="photo-slot">
+            <img
+              src="assets/profile_photo.jpg"
+              alt="Portrait of Stefano Agnelli"
+              loading="lazy"
+            />
+          </div>
+          <div class="hero-meta">
+            <div class="hero-card-row">
+              <span class="label"><strong>Location</strong></span>
+              <span>Brescia, Italy · Paris, France</span>
+            </div>
+            <div class="hero-card-row">
+              <span class="label"><strong>Status</strong></span>
+              <span>Open to new opportunities</span>
+            </div>
+            <div class="hero-card-row">
+              <span class="label"><strong>Now</strong></span>
+                <span>MSc thesis in Robotics &amp; AI @ <a href="https://exsensiarobotics.com/" target="_blank" style="transition: color 0.2s ease;" onmouseover="this.style.color='#d24c2c'" onmouseout="this.style.color=''">Exsensia</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Projects</p>
+          <h2>Selected GitHub work.</h2>
+        </div>
+        <div class="project-scroller" data-animate>
+          <div class="project-grid">
+          <article class="project-card" data-animate>
+            <div class="project-media">
+              <img
+                src="assets/projects/ai-hackathon.jpg"
+                alt="AI Hackathon Winner preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-meta">
+              <span>Hackathon</span>
+              <span>AI</span>
+            </div>
+            <h3>AI Hackathon Winner</h3>
+            <p>
+              Winner at the Milan 2025 ISSA Pulire hackathon for designing an AI solution
+              focused on industrial cleaning workflows.
+            </p>
+            <div class="project-tags">
+              <span>AI Strategy</span>
+              <span>Industrial Cleaning</span>
+              <span>Rapid Prototyping</span>
+            </div>
+            <div class="project-actions">
+              <a
+                class="project-link"
+                href="https://ai-orchestrator-lemon.vercel.app/"
+                target="_blank"
+                >See the result</a
+              >
+              <span class="project-link">·</span>
+              <a
+                class="project-link"
+                href="https://www.issapulire.com/it/stampa/news/vince-la-seconda-edizione-dell%E2%80%99hackathon-issa-pulire-il-team-i-team-secondo-classificato-il-team-idrobase-e-issa.html"
+                target="_blank"
+                >They talk about us</a
+              >
+            </div>
+          </article>
+          <article class="project-card" data-animate>
+            <div class="project-media">
+              <img
+                src="assets/projects/turtlebot3-navigation.jpg"
+                alt="TurtleBot3 navigation system preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-meta">
+              <span>Robotics</span>
+              <span>ROS2</span>
+            </div>
+            <h3>TurtleBot3 Navigation System</h3>
+            <p>
+              Navigation system for TurtleBot3 with ROS2 and Nav2, simulation made via Gazebo and RViz. Built for
+              research and rehabilitation use cases in collaboration with Hospital Sant'Anna (KR), Italy.
+            </p>
+            <div class="project-tags">
+              <span>Nav2</span>
+              <span>Gazebo</span>
+              <span>RViz</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/tetano02/turtlebot_workspace"
+              target="_blank"
+              >Open repo</a
+            >
+          </article>
+          <article class="project-card" data-animate>
+            <div class="project-media">
+              <img
+                src="assets/projects/spaceinvadersbc.jpg"
+                alt="SpaceInvadersBC imitation learning preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-meta">
+              <span>AI</span>
+              <span>Imitation</span>
+            </div>
+            <h3>SpaceInvaders AI Agent</h3>
+            <p>
+              Imitation learning in Atari Gymnasium with human-in-the-loop,
+              experimenting with different architectures NN, CNN, ViT, and GAIL as additional technique.
+            </p>
+            <div class="project-tags">
+              <span>Atari Gymnasium</span>
+              <span>ViT</span>
+              <span>GAIL</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/tetano02/SpaceInvadersBC"
+              target="_blank"
+              >Open repo</a
+            >
+          </article>
+          <article class="project-card" data-animate>
+            <div class="project-media">
+              <img
+                src="assets/projects/impact-lens.jpg"
+                alt="Impact Lens AI project preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-meta">
+              <span>Challenge</span>
+              <span>AI</span>
+            </div>
+            <h3>Impact Lens</h3>
+            <p>
+              AI-native anti-portfolio that predicts professional impact.
+              Placed 5th at the AI Works Challenge.
+            </p>
+            <div class="project-tags">
+              <span>AI Works</span>
+              <span>Product</span>
+              <span>Storytelling</span>
+            </div>
+            <a
+              class="project-link"
+              href="https://github.com/tetano02/Impact-Lens_AI_Works_Challenge"
+              target="_blank"
+              >Open repo</a
+            >
+          </article>
+          </div>
+        </div>
+        <div class="project-links" data-animate>
+          <span>Other repos:</span>
+          <a
+            href="https://github.com/tetano02/football_predictor_neural_network"
+            target="_blank"
+            >Football Predictor</a
+          >
+          <a
+            href="https://github.com/tetano02/blind_cooker"
+            target="_blank"
+            >BlindCooker</a
+          >
+          <a
+            href="https://github.com/tetano02/neural-network-from-scratch"
+            target="_blank"
+            >Neural Network From Scratch</a
+          >
+        </div>
+      </section>
+
+      <section class="section alt" id="about">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">About</p>
+          <h2>My Focus</h2>
+        </div>
+        <div class="about-grid">
+          <p data-animate>
+            I am an industrial automation engineer with a passion for robotics and
+            artificial intelligence. I enjoy learning about different approaches to 
+            control systems and modeling real world.
+          </p>
+          <p data-animate>
+           Throughout my studies i learned a lot about robotic control, machine learning, and the potential of LLMs for robotics.
+           I am particularly in how AI can change the way of designing and building robotic systems.
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Education</p>
+          <h2>Academic path</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" data-animate>
+            <p class="info-meta">2021 - 2024 - University of Brescia</p>
+            <h3>BSc in Industrial Automation Engineering</h3>
+            <p>
+              <span class="edu-label">Grade:</span> Cum Laude.<br>
+              <span class="edu-label">Thesis:</span> Machine Learning-based methods for MIMO
+              system identification.
+            </p>
+          </article>
+          <article class="info-card" data-animate>
+            <p class="info-meta">2024 - ongoing - University of Brescia</p>
+            <h3>MSc in Industrial Automation Engineering</h3>
+            <p>
+              <span class="edu-label">Thesis:</span> LLM-guided semantic understanding and imitation learning
+              for robotic task adaptation.
+            </p>
+          </article>
+          <article class="info-card" data-animate>
+            <p class="info-meta">2025 - 2026 - Sorbonne University, Paris</p>
+            <h3>Double Degree in Mechatronic Systems for Rehabilitation</h3>
+            <p><span class="edu-label">Focus:</span> Specialization in mechatronic systems for rehabilitation, robotics and AI.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="experience">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Experience</p>
+          <h2>My Research Experience.</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" data-animate>
+            <p class="info-meta">2026 - ONGOING - Exsensia AI, Kilometro Rosso, Bergamo</p>
+            <h3>Master Thesis (ongoing)</h3>
+            <p>
+              Investigating how LLMs enable semantic abstraction and
+              generalization of robotic tasks learned from demonstrations,
+              bridging low-level multimodal data and high-level task
+              representations.
+            </p>
+          </article>
+          <article class="info-card" data-animate>
+            <p class="info-meta">2025 - 2026 · Facility Genius (Remote)</p>
+            <h3>AI Developer Engineer</h3>
+            <p>
+              Built an online platform that generates LLM-based documentation
+              from UML diagrams for a metrics-driven technology company.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Skills</p>
+          <h2>Technical Skills by Area</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card" data-animate>
+            <h3>Programming</h3>
+            <ul>
+              <li>Python</li>
+              <li>C++</li>
+              <li>Git and Linux</li>
+            </ul>
+          </div>
+          <div class="skill-card" data-animate>
+            <h3>Machine Learning</h3>
+            <ul>
+              <li>PyTorch</li>
+              <li>Imitation and reinforcement learning</li>
+              <li>LLMs applications</li>
+            </ul>
+          </div>
+          <div class="skill-card" data-animate>
+            <h3>Robotics</h3>
+            <ul>
+              <li>ROS2</li>
+              <li>Robotic control</li>
+              <li>Perception-to-action systems</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="activities">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Activities</p>
+          <h2>Community, challenges, and recognition.</h2>
+        </div>
+        <div class="info-grid">
+          <article class="info-card" data-animate>
+            <p class="info-meta">IEEE Student Branch Brescia</p>
+            <h3>Active member</h3>
+            <p>
+              Involved in technical initiatives and professional development
+              activities.
+            </p>
+          </article>
+          <article class="info-card" data-animate>
+            <p class="info-meta">AI Hackathon Winner - Milan 2025</p>
+            <h3>National AI hackathon winner</h3>
+            <p>
+              Built a functional AI-based system for large-scale facility
+              simulation in a 7-hour challenge.
+            </p>
+          </article>
+          <article class="info-card" data-animate>
+            <p class="info-meta">IEEEXTREME Programming Competition</p>
+            <h3>Italian winner, Top 500 worldwide</h3>
+            <p>
+              Ranked among the top 500 teams worldwide out of 7,000+ teams, with
+              four consecutive years of participation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-heading" data-animate>
+          <p class="eyebrow">Contact</p>
+          <h2>Let&rsquo;s build something together.</h2>
+        </div>
+        <div class="contact-card" data-animate>
+          <p>
+            Have a project, a research idea, or just want to connect? I&rsquo;m
+            happy to chat.
+          </p>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:sagnelli02@gmail.com"
+              >Email me</a
+            >
+            <a class="btn ghost" href="https://linkedin.com/in/stefano-agnelli"
+              target="_blank"
+              >Connect on LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-animate>
+      <p>Stefano Agnelli - Portfolio 2026</p>
+      <div>
+        <a href="https://github.com/tetano02" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/stefano-agnelli" target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
