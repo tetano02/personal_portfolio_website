@@ -2,8 +2,6 @@
 
 Personal portfolio focused on robotics, AI, and research, with selected projects and contact info.
 
-![Preview](assets/profile_photo.jpg)
-
 ## Highlights
 - Editorial hero with CTAs and social links
 - Sections: Projects, About, Education, Experience, Skills, Activities, Contact
