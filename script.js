@@ -24,6 +24,7 @@ if (projectScroller) {
   let dragStartScrollLeft = 0;
   let draggedDistance = 0;
   let shouldSuppressClick = false;
+  let dragSpeed = 1;
   const dragActivationDistance = 6;
 
   const updateProjectFades = () => {
@@ -119,6 +120,7 @@ if (projectScroller) {
     dragStartScrollLeft = projectScroller.scrollLeft;
     draggedDistance = 0;
     shouldSuppressClick = false;
+    dragSpeed = event.pointerType === "touch" ? 1.7 : 1;
     projectScroller.classList.add("is-dragging");
     projectScroller.setPointerCapture(event.pointerId);
   });
@@ -130,7 +132,7 @@ if (projectScroller) {
 
     const deltaX = event.clientX - dragStartX;
     draggedDistance = Math.max(draggedDistance, Math.abs(deltaX));
-    projectScroller.scrollLeft = dragStartScrollLeft - deltaX;
+    projectScroller.scrollLeft = dragStartScrollLeft - deltaX * dragSpeed;
 
     if (draggedDistance > dragActivationDistance) {
       shouldSuppressClick = true;

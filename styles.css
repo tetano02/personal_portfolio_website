@@ -847,6 +847,12 @@ h3 {
 @media (hover: none) {
   .project-scroller {
     cursor: auto;
+    scroll-snap-type: none;
+  }
+
+  .project-card {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
   }
 }
 
