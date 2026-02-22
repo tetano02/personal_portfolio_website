@@ -19,6 +19,12 @@ if (projectScroller) {
   let fadeRafId = 0;
   let fadeTimeoutId = 0;
   const fadeSize = 28;
+  let activePointerId = null;
+  let dragStartX = 0;
+  let dragStartScrollLeft = 0;
+  let draggedDistance = 0;
+  let shouldSuppressClick = false;
+  const dragActivationDistance = 6;
 
   const updateProjectFades = () => {
     const maxScrollLeft = Math.max(
@@ -87,5 +93,76 @@ if (projectScroller) {
       projectScroller.scrollLeft += delta;
     },
     { passive: false }
+  );
+
+  const stopDrag = () => {
+    if (activePointerId === null) {
+      return;
+    }
+
+    if (draggedDistance <= dragActivationDistance) {
+      shouldSuppressClick = false;
+    }
+
+    activePointerId = null;
+    draggedDistance = 0;
+    projectScroller.classList.remove("is-dragging");
+  };
+
+  projectScroller.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+
+    activePointerId = event.pointerId;
+    dragStartX = event.clientX;
+    dragStartScrollLeft = projectScroller.scrollLeft;
+    draggedDistance = 0;
+    shouldSuppressClick = false;
+    projectScroller.classList.add("is-dragging");
+    projectScroller.setPointerCapture(event.pointerId);
+  });
+
+  projectScroller.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== activePointerId) {
+      return;
+    }
+
+    const deltaX = event.clientX - dragStartX;
+    draggedDistance = Math.max(draggedDistance, Math.abs(deltaX));
+    projectScroller.scrollLeft = dragStartScrollLeft - deltaX;
+
+    if (draggedDistance > dragActivationDistance) {
+      shouldSuppressClick = true;
+      if (event.cancelable) {
+        event.preventDefault();
+      }
+    }
+  });
+
+  const endPointerDrag = (event) => {
+    if (event.pointerId !== activePointerId) {
+      return;
+    }
+    stopDrag();
+  };
+
+  projectScroller.addEventListener("pointerup", endPointerDrag);
+  projectScroller.addEventListener("pointercancel", endPointerDrag);
+  projectScroller.addEventListener("lostpointercapture", stopDrag);
+  projectScroller.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+  });
+  projectScroller.addEventListener(
+    "click",
+    (event) => {
+      if (!shouldSuppressClick) {
+        return;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+      shouldSuppressClick = false;
+    },
+    true
   );
 }
